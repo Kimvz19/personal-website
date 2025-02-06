@@ -6,6 +6,15 @@
 /* Algemene styling  */
 /***********************/
 
+
+ul{
+list-style: none;
+}
+
+img{
+    width: 30px;
+}
+
 /********************/
 /* Vending machine  */
 /********************/
