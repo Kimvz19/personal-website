@@ -6,14 +6,54 @@
 /* colors */
 
 :root {
-  --main-color: #; 
-  --secondary-color: ; 
-  --font-size: ; 
+  --prefer-Radius: 1em;
+  --main-color: #;
+
+  --secondary-color: ;
+  --font-size: ;
 }
 
 
 /***********************/
 /* Algemene styling  */
 /***********************/
+header{
+  display: flex;
+  justify-content: center;
+}
+main{
+  background-color: white;
+  border-radius: var( --prefer-Radius);
+}
 
+h1 {
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f5f5f5;
+} 
 
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 5em;
+
+}
+
+ul li{
+  width: 15em;
+}
+
+ul img{
+  width: 5em;
+}
+
+body {
+  height: 100vh; /* hoogte */
+  background-image: linear-gradient(to left top, #d16ba5, #c777b9,
+      #ba83ca, #aa8fd8, #9a9ae1, #a0a4e5,
+      #a7ade9, #aeb7ec, #c7c3f0, #dbd0f4, #eddff8, #fbeefe);
+}
