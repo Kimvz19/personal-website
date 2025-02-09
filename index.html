@@ -38,25 +38,22 @@
     </main>
 
     <footer>
-          <!-- Input veld -->
-          <p>Voeg nummers in </p>
-          <input type="button" value="0">
-          <input type="button" value="0">
-          <input type="button" value="0">
-          <input type="button" value="0">
-
-
-          <!-- De buttons met nummers om in te toetsen  -->
-          <ul>
-              <li><button>1</button></li>
-              <li><button>2</button></li>
-              <li><button>3</button></li>
-              <li><button>4</button></li>
-              <li><button>5</button></li>
-              <li><button>6</button></li>
-              <li><button>7</button></li>
-              <li><button>8</button></li>
-          </ul>
+        <div class="container">
+            <input type="text" id="codeInput" readonly>
+            <div class="buttons">
+                <button onclick="addNumber(1)">1</button>
+                <button onclick="addNumber(2)">2</button>
+                <button onclick="addNumber(3)">3</button>
+                <button onclick="addNumber(4)">4</button>
+                <button onclick="addNumber(5)">5</button>
+                <button onclick="addNumber(6)">6</button>
+                <button onclick="addNumber(7)">7</button>
+                <button onclick="addNumber(8)">8</button>
+                <button onclick="addNumber(9)">9</button>
+                <button onclick="clearInput()">❌</button>
+                <button onclick="addNumber(0)">0</button>
+                <button onclick="submitCode()">✅</button>
+            </div>
     </footer>
 
     <script src="script.js"></script>

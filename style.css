@@ -51,20 +51,17 @@ ul img{
   width: 5em;
 }
 
+
 body {
   height: 100vh; /* hoogte */
   background-image: linear-gradient(to left top, #d16ba5, #c777b9,
       #ba83ca, #aa8fd8, #9a9ae1, #a0a4e5,
       #a7ade9, #aeb7ec, #c7c3f0, #dbd0f4, #eddff8, #fbeefe);
   
-  /* Voeg background-size toe om het bewegende effect te ondersteunen */
   background-size: 400% 400%;
-  
-  /* Voeg de animatie toe */
   animation: gradientAnimation 10s ease infinite;
 }
 
-/* Definieer de keyframes voor de animatie */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -76,3 +73,39 @@ body {
     background-position: 0% 50%;
   }
 }
+
+#codeInput {
+  width: 50%;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color:white;
+  color: black;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+button:nth-child(10) { background-color: lightcoral; } /* ❌ knop */
+button:nth-child(12) { background-color: lightgreen; } /* ✅ knop */
