@@ -21,6 +21,7 @@ header{
   display: flex;
   justify-content: center;
 }
+
 main{
   background-color: white;
   border-radius: var( --prefer-Radius);
@@ -34,22 +35,6 @@ h1 {
   color: #f5f5f5;
 } 
 
-ul{
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin: 5em;
-
-}
-
-ul li{
-  width: 15em;
-}
-
-ul img{
-  width: 5em;
-}
 
 
 body {
@@ -73,6 +58,39 @@ body {
     background-position: 0% 50%;
   }
 }
+
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 producten per rij */
+  gap: 20px; /* Ruimte tussen producten */
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100px; /* Pas aan afhankelijk van je afbeelding */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-code {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
 
 #codeInput {
   width: 80%; /* Maakt het invoerveld iets kleiner */
