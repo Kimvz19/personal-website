@@ -7,78 +7,7 @@
 
 
 
+
 /***********************/
 /* Algemene styling  */
 /***********************/
-
-
-ul, li{
-list-style: none;
-}
-
-img{
-    width: 30px;
-}
-
-main{
-    display: flex;
-    background-color: grey;
-    max-height: 1000px;
-    height: 100;
-}
-
-/********************/
-/* Vending machine  */
-/********************/
-
-div:nth-of-type(1){
-    background-color: lightgrey;
-    border-radius: 3em;
-    width: 100%;
-}
-
-div:nth-of-type(1) ul{
-    background-color: lightpink;
-    border-radius: 4em;
-    width: 75%;
-}
-
-/****************************/
-/* Vending machine nummers */
-/***************************/
-ul:has(button) {
-    display: flex;
-    flex-direction: row;
-}
-
-ul:has(button) button {
-    width: 55px;
-    aspect-ratio: 1;
-    background: lightblue;
-    border: none;
-    clip-path: polygon(
-      50% 0%, 61% 35%, 98% 35%, 
-      68% 57%, 79% 91%, 50% 70%, 
-      21% 91%, 32% 57%, 2% 35%, 
-      39% 35%
-    );
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  ul:has(button) button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    clip-path: inherit;
-    filter: blur(6px); /* Maakt de hoeken zachter */
-    z-index: -1;
-  }
-  
-  ul:has(button) button:hover {
-    background: lightpink;
-    transform: scale(1.1);
-  }
-  
