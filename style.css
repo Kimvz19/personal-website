@@ -5,9 +5,15 @@
 /* fonts */
 /* colors */
 
-
+:root {
+  --main-color: #; 
+  --secondary-color: ; 
+  --font-size: ; 
+}
 
 
 /***********************/
 /* Algemene styling  */
 /***********************/
+
+
