@@ -56,4 +56,23 @@ body {
   background-image: linear-gradient(to left top, #d16ba5, #c777b9,
       #ba83ca, #aa8fd8, #9a9ae1, #a0a4e5,
       #a7ade9, #aeb7ec, #c7c3f0, #dbd0f4, #eddff8, #fbeefe);
+  
+  /* Voeg background-size toe om het bewegende effect te ondersteunen */
+  background-size: 400% 400%;
+  
+  /* Voeg de animatie toe */
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Definieer de keyframes voor de animatie */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
