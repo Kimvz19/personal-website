@@ -7,9 +7,11 @@
 
 :root {
   /* fonts */
-    --font-family1: "Gruppo", serif;
+    --font-family1: "Montserrat", serif;
     --font-family2: "Sacramento", serif;
-    --font-weight: 400;
+    --font-optical-sizing: auto;
+    --font-weight1: 400;
+    --font-weight2: 300;
     --font-style: normal;
 }
 
@@ -40,10 +42,9 @@ main {
 h1 {
   text-transform: uppercase;
   font-family: var(--font-family1);
-  font-weight: var(--font-weight);
+  font-weight: var(--font-weight2);
   font-style: var(--font-style);
   font-size: 35px;
-  font-weight: 700;
   color: white;
 }
 
@@ -114,13 +115,13 @@ body {
 
 .product-code {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: var(--font-family1);
   font-style: var(--font-style);
   font-weight: var(--font-weight);
   border: 0.1em solid silver;
-  padding: .5em;
-  width: 5em;
+  padding: .1em;
+  width: 8em;
   background-color: black;
   border-radius: .5em;
   color: white;
@@ -162,7 +163,7 @@ button {
 }
 
 button:hover {
-  background-color: lightblue;
+  background-color: silver;
 }
 
 button:nth-child(10) {
