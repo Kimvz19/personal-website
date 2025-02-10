@@ -113,10 +113,17 @@ body {
 }
 
 .product-code {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: var(--font-family1);
+  font-style: var(--font-style);
+  font-weight: var(--font-weight);
+  border: 0.1em solid silver;
+  padding: .5em;
+  width: 5em;
+  background-color: black;
+  border-radius: .5em;
+  color: white;
 }
 
 
