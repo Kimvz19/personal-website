@@ -34,6 +34,11 @@ header {
   margin: 2em;
 }
 
+header img{
+ width: 600px;
+ margin-bottom: -5em ;
+}
+
 main {
   background-color: white;
   border-radius: var(--prefer-Radius);
