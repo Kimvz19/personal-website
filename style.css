@@ -44,14 +44,12 @@ main {
 
 
 body {
-  height: 100vh;
   /* hoogte */
-  background-image: linear-gradient(to left top, #d16ba5, #c777b9,
-      #ba83ca, #aa8fd8, #9a9ae1, #a0a4e5,
-      #a7ade9, #aeb7ec, #c7c3f0, #dbd0f4, #eddff8, #fbeefe);
+  background-image: linear-gradient(to left top, #000000, #FFC1CF,
+      #FFFFFF, #000000);
 
   background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  animation: gradientAnimation 8s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -82,7 +80,7 @@ body {
 
 .product {
   background: white;
-  padding: 10px;
+  padding: 30px 70px 30px 70px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
