@@ -30,6 +30,10 @@ h1 {
   margin-bottom: -15px;
 }
 
+p{
+  font-family: "Montserrat";
+}
+
 
 body {
   background: linear-gradient(to left top, #000000, #FFFFFF, #000000);
@@ -188,7 +192,6 @@ dialog {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   width: 300px;
-  margin-top: 20px;
   text-align: center;
 }
 
