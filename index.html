@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,56 +22,89 @@
 
     <main>
         <div class="product-container">
-            <div class="product">
-                <img src="images/products/boyfriend.png" alt="Product 1">
-                <p>Boyfriend</p>
-                <p class="product-code">Code: 1001</p>
-            </div>
-            <div class="product">
-                <img src="images/products/cat.png" alt="Product 2">
-                <p>Cat</p>
-                <p class="product-code">Code: 1002</p>
-            </div>
-            <div class="product">
-                <img src="images/products/coding.png" alt="Product 3">
-                <p>Coding</p>
-                <p class="product-code">Code: 1003</p>
-            </div>
-            <div class="product">
-                <img src="images/products/newHome.png" alt="Product 4">
-                <p>New Home</p>
-                <p class="product-code">Code: 1004</p>
-            </div>
-            <div class="product">
-                <img src="images/products/sushi.png" alt="Product 5">
-                <p>Favorite Food</p>
-                <p class="product-code">Code: 1005</p>
-            </div>
-            <div class="product">
-                <img src="images/products/traveling.png" alt="Product 6">
-                <p>Traveling</p>
-                <p class="product-code">Code: 1006</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <input type="text" id="codeInput" readonly>
-            <div class="buttons">
-                <button onclick="addNumber(1)">1</button>
-                <button onclick="addNumber(2)">2</button>
-                <button onclick="addNumber(3)">3</button>
-                <button onclick="addNumber(4)">4</button>
-                <button onclick="addNumber(5)">5</button>
-                <button onclick="addNumber(6)">6</button>
-                <button onclick="addNumber(7)">7</button>
-                <button onclick="addNumber(8)">8</button>
-                <button onclick="addNumber(9)">9</button>
-                <button onclick="clearInput()">❌</button>
-                <button onclick="addNumber(0)">0</button>
-                <button onclick="submitCode()">✅</button>
-            </div>
-        </div>
-    </main>
+               <div class="product" data-code="1001" data-info="Heerlijk vers sushi gerecht.">
+                   <img src="images/products/boyfriend.png" alt="Product 1">
+                   <p>Sushi</p>
+                   <p class="product-code">Code: 1001</p>
+               </div>
+               <div class="product" data-code="1002" data-info="Een schattige kat knuffel.">
+                   <img src="images/products/cat.png" alt="Product 2">
+                   <p>Kat</p>
+                   <p class="product-code">Code: 1002</p>
+               </div>
+               <div class="product" data-code="1003" data-info="Een handige sleutel voor je huis of auto.">
+                   <img src="images/products/newHome.png" alt="Product 3">
+                   <p>Sleutel</p>
+                   <p class="product-code">Code: 1003</p>
+               </div>
+               <div class="product" data-code="1004" data-info="Trendy en stevige shopping tas.">
+                   <img src="images/products/coding.png" alt="Product 4">
+                   <p>coding</p>
+                   <p class="product-code">Code: 1004</p>
+               </div>
+               <div class="product" data-code="1005" data-info="Een pilates set voor thuisgebruik.">
+                   <img src="images/products/traveling.png" alt="Product 5">
+                   <p>Pilates</p>
+                   <p class="product-code">Code: 1005</p>
+               </div>
+               <div class="product" data-code="1006" data-info="Boek over coding en technologie.">
+                   <img src="images/products/sushi.png" alt="Product 6">
+                   <p>Coding</p>
+                   <p class="product-code">Code: 1006</p>
+               </div>
+           </div>
+       
+           <div class="container">
+               <input type="text" id="codeInput" readonly>
+               <div class="buttons">
+                   <button onclick="addNumber(1)">1</button>
+                   <button onclick="addNumber(2)">2</button>
+                   <button onclick="addNumber(3)">3</button>
+                   <button onclick="addNumber(4)">4</button>
+                   <button onclick="addNumber(5)">5</button>
+                   <button onclick="addNumber(6)">6</button>
+                   <button onclick="addNumber(7)">7</button>
+                   <button onclick="addNumber(8)">8</button>
+                   <button onclick="addNumber(9)">9</button>
+                   <button onclick="clearInput()">❌</button>
+                   <button onclick="addNumber(0)">0</button>
+                   <button onclick="submitCode()">✅</button>
+               </div>
+           </div>
+       
+           <!-- De unieke product-info secties voor elke productcode -->
+           <dialog id="product-info-1001">
+               <h2>Favorite food</h2>
+               <p>Heerlijk vers sushi gerecht met verschillende smaken en toppings.</p>
+               <button onclick="closeDialog('product-info-1001')">Close</button>
+           </dialog>
+           <dialog id="product-info-1002">
+               <h2>I have 2 cats as pets</h2>
+               <p>The names are Nala and Cleo</p>
+               <button onclick="closeDialog('product-info-1002')">Sluiten</button>
+           </dialog>
+           <dialog id="product-info-1003">
+               <h2>I have 2 cats as pets</h2>
+               <p>The names are Nala and Cleo</p>
+               <button onclick="closeDialog('product-info-1002')">Sluiten</button>
+           </dialog>
+           <dialog id="product-info-1004">
+               <h2>I have 2 cats as pets</h2>
+               <p>The names are Nala and Cleo</p>
+               <button onclick="closeDialog('product-info-1002')">Sluiten</button>
+           </dialog>
+           <dialog id="product-info-1005">
+               <h2>I have 2 cats as pets</h2>
+               <p>The names are Nala and Cleo</p>
+               <button onclick="closeDialog('product-info-1002')">Sluiten</button>
+           </dialog>
+           <dialog id="product-info-1006">
+               <h2>I have 2 cats as pets</h2>
+               <p>The names are Nala and Cleo</p>
+               <button onclick="closeDialog('product-info-1002')">Sluiten</button>
+           </dialog>
+       </main>
+       
 
     <footer>
     </footer>

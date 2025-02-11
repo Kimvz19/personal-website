@@ -7,19 +7,18 @@
 
 :root {
   /* fonts */
-    --font-family1: "Montserrat", serif;
-    --font-family2: "Sacramento", serif;
-    --font-optical-sizing: auto;
-    --font-weight1: 400;
-    --font-weight2: 300;
-    --font-style: normal;
+  --font-family1: "Montserrat", serif;
+  --font-family2: "Sacramento", serif;
+  --font-optical-sizing: auto;
+  --font-weight1: 400;
+  --font-weight2: 300;
+  --font-style: normal;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-
 
 
 
@@ -34,20 +33,29 @@ header {
   margin: 2em;
 }
 
-header img{
- width: 600px;
- margin-bottom: -5em ;
+header img {
+  width: 600px;
+  margin-bottom: -5em;
 }
 
 main {
   background-color: white;
-  border-radius: var(--prefer-Radius);
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-h1{
+@media (max-width: 700px) {
+  .product-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  main{
+    flex-direction: column;
+  }
+}
+
+h1 {
   font-family: var(--font-family2);
   font-weight: var(--font-weight);
   font-style: var(--font-style);
@@ -55,15 +63,17 @@ h1{
   font-size: 32px;
 }
 
-
-
 body {
-  /* hoogte */
   background-image: linear-gradient(to left top, #000000,
       #FFFFFF, #000000);
-
   background-size: 400% 400%;
   animation: gradientAnimation 8s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 @keyframes gradientAnimation {
@@ -83,88 +93,44 @@ body {
 
 .product-container {
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(4, 1fr);  /* 4 producten per rij */
-  gap: 10px;
-  padding: 10px;
-  max-width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    text-align: center;
+    width: 100%;
 }
-
- /* Aanpassingen aan de container van de producten*/
-@media (max-width: 1000px) {
-  .product-container {
-      grid-template-columns: repeat(3, 1fr);
-  }
-  main{
-    flex-direction: column;
-  }
-}
-
- /* mid*/
-@media (max-width: 770px) {
-  .product-container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-
- /* Telefoon*/
-@media (max-width: 500px) {
-  .product-container {
-      display: flex; 
-      overflow-x: auto; 
-      scroll-snap-type: x mandatory; 
-      white-space: nowrap;
-      padding: 10px;
-      gap: 10px;
-  }
-}
-
-.product-container::-webkit-scrollbar {
-  display: none;
-}
-
-
 
 .product {
-  flex: 0 0 auto; 
   background: white;
-  padding: 30px 70px 30px 70px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
+.product:hover {
+  transform: scale(1.2);
+}
+
+
 .product img {
-  width: 100px;
-  /* Pas aan afhankelijk van je afbeelding */
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .product-code {
-  margin-top: 15px;
   font-size: 18px;
   font-family: var(--font-family1);
   font-style: var(--font-style);
   font-weight: var(--font-weight);
   border: 0.1em solid silver;
-  padding: .1em;
-  width: 8em;
-  background-color: black;
-  border-radius: .5em;
+  margin-top: 10px;
+  padding: 5px;
+  background: black;
   color: white;
-}
-
-
-#codeInput {
-  width: 80%;
-  /* Maakt het invoerveld iets kleiner */
-  height: 50px;
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 10px;
-  border: 2px solid #333;
   border-radius: 5px;
 }
 
@@ -173,35 +139,77 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Zorgt ervoor dat alles in het midden staat */
+  text-align: center;
+}
+
+#codeInput {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 button {
   width: 60px;
   height: 60px;
-  font-size: 24px;
+  font-size: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: white;
+  background: white;
   color: black;
+  transition: background 0.2s;
 }
 
 button:hover {
-  background-color: silver;
+  background: silver;
 }
 
 button:nth-child(10) {
-  background-color: lightcoral;
+  background: lightcoral;
 }
 
-/* ❌ knop */
 button:nth-child(12) {
-  background-color: lightgreen;
+  background: lightgreen;
 }
 
-/* ✅ knop */
+* Style for dialogs */
+dialog {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 300px;
+    margin-top: 20px;
+  text-align: center;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6); /* Darken the backdrop */
+}
+
+.container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons button:active {
+    background-color: #ccc;
+}
