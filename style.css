@@ -22,12 +22,19 @@ header {
   margin: 2em;
 }
 
-h1 {
+h1, h2 {
   color: black;
   font-size: 32px;
   font-family:  "Sacramento";
   margin-top: -50px;
   margin-bottom: -15px;
+}
+
+h2{
+  color: black;
+  font-size: 32px;
+  font-family:  "Sacramento";
+  margin-top: 10px;
 }
 
 p{
