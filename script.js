@@ -42,19 +42,24 @@ fetch(myURL)
         <br> 1) ${goal1}<br>2) ${goal2}<br>3) ${goal3}.`
 
 
-        // 4 months ago I started living on my own. My roommate's name is Tess, she is my sister. We live in...
+        // dialog4
         let {house, dateHouse, HouseMateName} = JsonCustom;
         let dialog4 = document.getElementById('product-info-1004');
         let pTag4 = dialog4.querySelector('p');
         pTag4.innerHTML = `${dateHouse} ago, I started living on my own. My housemate's name is ${HouseMateName}, she is my sister. We live in ${house}.`
 
 
-
-        // 4 months ago I started living on my own. My roommate's name is Tess, she is my sister. We live in...
+        // dialog 5 
         let {favFood} = JsonCustom;
         let dialog5 = document.getElementById('product-info-1005');
         let pTag5 = dialog5.querySelector('p');
         pTag5.innerHTML = `My favorite food is ${favFood}`
+
+        // dialog6 
+        let {newVakay, vakaySummer} = JsonCustom;
+        let dialog6 = document.getElementById('product-info-1006');
+        let pTag6 = dialog6.querySelector('p');
+        pTag6.innerHTML = `This coming holiday, I'm going ${newVakay} and during the summer holidays I'm going to ${vakaySummer}.`
 
     })
     .catch(error => console.error('Fout bij ophalen:', error));
