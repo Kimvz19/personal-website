@@ -17,15 +17,15 @@
 <body>
     <header>
         <img src="images/kim-logo.png" alt="logo kim's vending">
-        <h1>Text from API</h1>
+        <h1></h1>
     </header>
 
     <main>
         <div class="product-container">
-               <div class="product" data-code="1001" data-info="Heerlijk vers sushi gerecht.">
+               <div class="product" data-code="2202" data-info="boyfriend">
                    <img src="images/products/boyfriend.png" alt="Product 1">
                    <p>Boyfriend</p>
-                   <p class="product-code">Code: 1001</p>
+                   <p class="product-code">Code: 2202</p>
                </div>
                <div class="product" data-code="1002" data-info="Een schattige kat knuffel.">
                    <img src="images/products/cat.png" alt="Product 2">
@@ -73,36 +73,47 @@
            </div>
        
            <!-- De unieke product-info secties voor elke productcode -->
-           <dialog id="product-info-1001">
+            <!-- Boyfriend product-->
+           <dialog id="product-info-2202">
             <img src="images/kim-logo-line2.png" alt="kim's logo line">
-               <h2>Favorite food</h2>
-               <p>Heerlijk vers sushi gerecht met verschillende smaken en toppings.</p>
-               <button onclick="closeDialog('product-info-1001')">Close</button>
+               <h2>My boyfriend</h2>
+               <p></p>
+               <button onclick="closeDialog('product-info-2202')">Close</button>
                <img src="images/kim-logo-line2.png" alt="kim's logo line">
            </dialog>
+
+           <!-- My Pets product-->
            <dialog id="product-info-1002">
-               <h2>I have 2 cats as pets</h2>
-               <p>The names are Nala and Cleo</p>
+               <h2>My pets</h2>
+               <p></p>
                <button onclick="closeDialog('product-info-1002')">Sluiten</button>
            </dialog>
+
+           <!-- Coding at school product-->
            <dialog id="product-info-1003">
-               <h2>I have 2 cats as pets</h2>
-               <p>The names are Nala and Cleo</p>
+               <h2>Coding at school</h2>
+               <p></p>
                <button onclick="closeDialog('product-info-1002')">Sluiten</button>
            </dialog>
+
+           <!-- New Home product-->
            <dialog id="product-info-1004">
-               <h2>I have 2 cats as pets</h2>
-               <p>The names are Nala and Cleo</p>
+               <h2>New Home</h2>
+               <p></p>
                <button onclick="closeDialog('product-info-1002')">Sluiten</button>
            </dialog>
+
+           <!-- Fav Food product-->
            <dialog id="product-info-1005">
-               <h2>I have 2 cats as pets</h2>
-               <p>The names are Nala and Cleo</p>
+               <h2>Fav Food</h2>
+               <p></p>
                <button onclick="closeDialog('product-info-1002')">Sluiten</button>
            </dialog>
+
+           <!-- Traveling product-->
            <dialog id="product-info-1006">
-               <h2>I have 2 cats as pets</h2>
-               <p>The names are Nala and Cleo</p>
+               <h2>Traveling</h2>
+               <p></p>
                <button onclick="closeDialog('product-info-1002')">Sluiten</button>
            </dialog>
        </main>

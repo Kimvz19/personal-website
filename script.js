@@ -14,8 +14,33 @@ fetch(myURL)
     .then(data208 => {
         let myNickName = data208.data.nickname; //filtert nickname 
         let deH1 = document.querySelector("h1"); //h1 selecteren html
+
         deH1.textContent = "Learn more about " + myNickName;
-        // console.log(myName); 
+        let JsonCustom = JSON.parse(data208.data.custom);
+        //  let myPets = JsonCustom.Huisdier;
+        //  console.log(myPets); 
+
+        // bron voor het stringen van variabelen : https://chatgpt.com/share/67ab44da-3404-8000-b5ea-b96e0839aa55
+        //  Dialog 1
+        let { BoyfriendName, relationship, locationMeeting, anniversaryDate } = JsonCustom;
+        let dialog1 = document.getElementById('product-info-2202');
+        let pTag1 = dialog1.querySelector('p');
+        pTag1.textContent = `My boyfriend is ${BoyfriendName}. We have a ${relationship} year long relationship. We met at ${locationMeeting}. Our anniversary date is ${anniversaryDate}.`;
+
+
+        //Dialog 2
+        let { cat1, cat2, cats, genderCat, ageCat } = JsonCustom;
+        let dialog2 = document.getElementById('product-info-1002');
+        let pTag2 = dialog2.querySelector('p');
+        pTag2.textContent = `I have ${cats}, ${cat1} and ${cat2}. Their both ${genderCat}s and ${ageCat} years old.`;
+
+
+        // let dialog2 = document.getElementById('product-info-1002');
+        // let dialog3 = document.getElementById('product-info-1003');
+        // let dialog4 = document.getElementById('product-info-1004');
+        // let dialog5 = document.getElementById('product-info-1005');
+        // let dialog6 = document.getElementById('product-info-1006');
+
     })
     .catch(error => console.error('Fout bij ophalen:', error));
 
@@ -39,7 +64,7 @@ function submitCode() {
 
     // Verberg alle dialoogvensters eerst
     let allDialogs = document.querySelectorAll('dialog');
-    allDialogs.forEach(function(dialog) {
+    allDialogs.forEach(function (dialog) {
         dialog.close();
     });
 
