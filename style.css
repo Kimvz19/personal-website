@@ -43,7 +43,7 @@ h2 {
 }
 
 p {
-  font-family: "Montserrat";
+  font-family: var(--font-family1);
 }
 
 
