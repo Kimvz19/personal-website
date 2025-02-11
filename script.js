@@ -34,12 +34,27 @@ fetch(myURL)
         let pTag2 = dialog2.querySelector('p');
         pTag2.textContent = `I have ${cats}, ${cat1} and ${cat2}. Their both ${genderCat}s and ${ageCat} years old.`;
 
+        //Dialog 3
+        let { schoolYear, minor, goal1, goal2, goal3} = JsonCustom;
+        let dialog3 = document.getElementById('product-info-1003');
+        let pTag3 = dialog3.querySelector('p');
+        pTag3.innerHTML = `I'm now in my ${schoolYear} of CMD. For my minor, I chose ${minor}. <br> <br> My goals for this minor are:
+        <br> 1) ${goal1}<br>2) ${goal2}<br>3) ${goal3}.`
 
-        // let dialog2 = document.getElementById('product-info-1002');
-        // let dialog3 = document.getElementById('product-info-1003');
-        // let dialog4 = document.getElementById('product-info-1004');
-        // let dialog5 = document.getElementById('product-info-1005');
-        // let dialog6 = document.getElementById('product-info-1006');
+
+        // 4 months ago I started living on my own. My roommate's name is Tess, she is my sister. We live in...
+        let {house, dateHouse, HouseMateName} = JsonCustom;
+        let dialog4 = document.getElementById('product-info-1004');
+        let pTag4 = dialog4.querySelector('p');
+        pTag4.innerHTML = `${dateHouse} ago, I started living on my own. My housemate's name is ${HouseMateName}, she is my sister. We live in ${house}.`
+
+
+
+        // 4 months ago I started living on my own. My roommate's name is Tess, she is my sister. We live in...
+        let {favFood} = JsonCustom;
+        let dialog5 = document.getElementById('product-info-1005');
+        let pTag5 = dialog5.querySelector('p');
+        pTag5.innerHTML = `My favorite food is ${favFood}`
 
     })
     .catch(error => console.error('Fout bij ophalen:', error));

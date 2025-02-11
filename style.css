@@ -128,8 +128,8 @@ main {
 
 
 .product img {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -204,6 +204,7 @@ button {
   transition: background 0.2s;
 }
 
+
 button:hover {
   background: silver;
 }
@@ -252,3 +253,13 @@ dialog::backdrop {
 .buttons button:active {
   background-color: #ccc;
 }
+
+#product-info-1005 img:nth-of-type(2){
+animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite both;
+height: 150px;
+margin: 5px;
+}
+
+/* dialog:has(button) button{
+;
+} */
