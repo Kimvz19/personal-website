@@ -1,3 +1,36 @@
+/***********************/
+/* Custom Properties  */
+/***********************/
+root {
+  /* fonts */
+  --font-family1: "Montserrat", serif;
+  --font-family2: "Sacramento";
+  --font-optical-sizing: auto;
+  --font-weight1: 400;
+  --font-weight2: 300;
+  --font-style: normal;
+}
+
+/***********************/
+/* Algemene styling  */
+/***********************/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 2em;
+}
+
+h1 {
+  color: black;
+  font-size: 32px;
+  font-family:  "Sacramento";
+  margin-top: -50px;
+  margin-bottom: -15px;
+}
+
+
 body {
   background: linear-gradient(to left top, #000000, #FFFFFF, #000000);
   background-size: 400% 400%;
@@ -9,12 +42,22 @@ body {
   height: 100vh;
   margin: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 main {
@@ -27,35 +70,36 @@ main {
 
 @media (min-width: 750px) {
   .product-container {
-  grid-template-columns: repeat(3, 1fr);
-  display: grid;
-  
-}
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
 
-.product:hover {
-  transform: scale(1.2);
-}
+  }
 
-.product{
-  transition: transform 0.2s;
-}
+  .product:hover {
+    transform: scale(1.2);
+  }
+
+  .product {
+    transition: transform 0.2s;
+  }
 }
 
 @media (max-width: 750px) {
-main{
-  flex-direction: column;
-}
-.product-container {
-  max-width: 500px;
-  display: flex;
-  margin-left: 210px;
-  justify-content: flex-start;
-  overflow: scroll;
-}
+  main {
+    flex-direction: column;
+  }
 
-.product{
-  transition: none;
-}
+  .product-container {
+    max-width: 500px;
+    display: flex;
+    margin-left: 210px;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+  .product {
+    transition: none;
+  }
 }
 
 .product-container {
@@ -149,7 +193,8 @@ dialog {
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.6); /* Darken the backdrop */
+  background: rgba(0, 0, 0, 0.6);
+  /* Darken the backdrop */
 }
 
 .container {
