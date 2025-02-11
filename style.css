@@ -267,6 +267,11 @@ height: 150px;
 margin: 5px;
 }
 
-/* dialog:has(button) button{
-;
-} */
+dialog:has(button) button{
+background-color: lightgrey;
+width: 80px;
+height: 35px;
+margin-bottom: 15px;
+font-family: "Montserrat";
+font-size: 15px;
+}
