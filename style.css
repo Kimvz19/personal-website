@@ -13,6 +13,13 @@
 
 }
 
+/* voor de kleure */
+@media (color-gamut:p3) {
+  :root {
+    --green: color(display-p3 0 1 0);
+  }
+}
+
 
 
 /***********************/
@@ -26,7 +33,7 @@ header {
   margin: 2em;
 }
 
-h1{
+h1 {
   color: black;
   font-size: 32px;
   font-family: var(--font-family2);
@@ -48,9 +55,10 @@ p {
 
 
 body {
-  background: linear-gradient(to left top, #000000, #FFFFFF, #000000);
-  background-size: 400% 400%;
-  animation: gradientAnimation 8s ease infinite;
+  /* background: linear-gradient(to left top, #000000, #FFFFFF, #000000); */
+  background-size: 120% 150%;
+  background-image: url("/images/products/spacyBackground.png");
+  animation: gradientAnimation 10s ease infinite;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,11 +76,9 @@ body {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -84,8 +90,8 @@ main {
   align-items: center;
   gap: 20px;
   margin: 0 50px 50px;
-  border: 10px solid white;
-  background-color: white;
+  border: 10px solid #a5a3b2;
+  background-color:  rgba(255, 255, 255, 0.8);;
   border-radius: 15px;
   padding: 2em;
 }
