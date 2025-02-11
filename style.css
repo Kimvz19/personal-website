@@ -1,7 +1,7 @@
 /***********************/
 /* Custom Properties  */
 /***********************/
-root {
+:root {
   /* fonts */
   --font-family1: "Montserrat", serif;
   --font-family2: "Sacramento";
@@ -9,7 +9,11 @@ root {
   --font-weight1: 400;
   --font-weight2: 300;
   --font-style: normal;
+
+
 }
+
+
 
 /***********************/
 /* Algemene styling  */
@@ -22,22 +26,23 @@ header {
   margin: 2em;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: black;
   font-size: 32px;
-  font-family:  "Sacramento";
+  font-family: var(--font-family2);
   margin-top: -50px;
   margin-bottom: -15px;
 }
 
-h2{
+h2 {
   color: black;
   font-size: 32px;
-  font-family:  "Sacramento";
+  font-family: "Sacramento";
   margin-top: 10px;
 }
 
-p{
+p {
   font-family: "Montserrat";
 }
 
@@ -81,7 +86,7 @@ main {
   margin: 0 50px 50px;
   border: 10px solid white;
   background-color: white;
-  border-radius: 15px; 
+  border-radius: 15px;
   padding: 2em;
 }
 
@@ -142,27 +147,33 @@ main {
 }
 
 /* bron voor hover animatie : https://stackoverflow.com/questions/38132700/css-wiggle-shake-effect */
-.product img:hover{
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+.product img:hover {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
 
 @keyframes shake {
-  10%, 90% {
+
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
 
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
@@ -204,16 +215,15 @@ button {
   height: 60px;
   font-size: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.75em;
   cursor: pointer;
-  background: white;
+  background: lightgray;
   color: black;
   transition: background 0.2s;
 }
 
-
 button:hover {
-  background: silver;
+  background: #f0dfe7;
 }
 
 button:nth-child(10) {
@@ -235,7 +245,7 @@ dialog {
   text-align: center;
 }
 
-dialog img{
+dialog img {
   margin-left: -50px;
   padding: 1px 1px;
 }
@@ -261,17 +271,17 @@ dialog::backdrop {
   background-color: #ccc;
 }
 
-#product-info-1005 img:nth-of-type(2){
-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite both;
-height: 150px;
-margin: 5px;
+#product-info-1005 img:nth-of-type(2) {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite both;
+  height: 150px;
+  margin: 5px;
 }
 
-dialog:has(button) button{
-background-color: lightgrey;
-width: 80px;
-height: 35px;
-margin-bottom: 15px;
-font-family: "Montserrat";
-font-size: 15px;
+dialog:has(button) button {
+  background-color: lightgrey;
+  width: 80px;
+  height: 35px;
+  margin-bottom: 15px;
+  font-family: "Montserrat";
+  font-size: 15px;
 }
