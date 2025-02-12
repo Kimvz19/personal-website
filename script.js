@@ -1,7 +1,7 @@
 // Deel van code gehaald uit opdracht "learn API for beginners"
 // toevoeging aan code : https://chatgpt.com/share/67a9f8ba-2a20-8000-898f-27224b395e7f
 
-//Variabelen
+//Variabelen url
 const baseURL = 'https://fdnd.directus.app/';
 const endpointMe = 'items/person/208';
 
@@ -10,30 +10,34 @@ const myURL = baseURL + endpointMe;
 console.log(myURL);
 
 fetch(myURL)
-    .then(response => response.json())  // Zet de response om naar JSON
+    .then(response => response.json())
     .then(data208 => {
-        let myNickName = data208.data.nickname; //filtert nickname 
-        let birthdayDate = data208.data.birthdate;
-        let myName = data208.data.name;
-        let deH1 = document.querySelector("h1"); //h1 selecteren html
-        let deH2 = document.querySelector("h2");
-        let footerP = document.querySelector("footer p");
 
-        deH1.textContent = birthdayDate;
-        deH2.textContent = myNickName;
-        footerP.textContent = "made by " + myName;
+        let myNickName = data208.data.nickname; // filter nickname 
+        let birthdayDate = data208.data.birthdate; // filter birthdate
+        let myName = data208.data.name; // filter full name
 
-        // Selecteert de bestaande profielfoto <img> in het <article>-element
-        let myImg = document.querySelector("article img");
-        let myAvatar = data208.data.avatar;
-        myImg.src = myAvatar;
+
+        let deH1 = document.querySelector("h1"); // select h1 html 
+        let deH2 = document.querySelector("h2"); // select h2 html 
+        let footerP = document.querySelector("footer p"); // select p footer html 
+
+
+        deH1.textContent = birthdayDate; // adding h1 birthday
+        deH2.textContent = myNickName; // adding h2 nickname
+        footerP.textContent = "made by " + myName; // adding footer p full name 
+
+        // profile picture 
+        let myImg = document.querySelector("article img"); // select article img
+        let myAvatar = data208.data.avatar; // filter avatar img 
+        myImg.src = myAvatar;  // src. 
       
 
-        let JsonCustom = JSON.parse(data208.data.custom);
-        //  let myPets = JsonCustom.Huisdier;
-        //  console.log(myPets); 
 
+        // variabele om stringen makkelijker te maken 
         // bron voor het stringen van variabelen : https://chatgpt.com/share/67ab44da-3404-8000-b5ea-b96e0839aa55
+        let JsonCustom = JSON.parse(data208.data.custom);
+
         //  Dialog 1
         let { BoyfriendName, relationship, locationMeeting, anniversaryDate } = JsonCustom;
         let dialog1 = document.getElementById('product-info-2202');
@@ -75,27 +79,33 @@ fetch(myURL)
         pTag6.innerHTML = `This coming holiday, I'm going ${newVakay} and during the summer holidays I'm going to ${vakaySummer}.`
 
     })
+    //error prevention
     .catch(error => console.error('Fout bij ophalen:', error));
 
 
 
-//Functies voor het invoerveld en mijn producten.
-// Functie om het nummer toe te voegen aan de input
+
+
+// function adding numbers in inputveld
+// gekoppeld aan button met vinkje 
 function addNumber(number) {
-    let codeInput = document.getElementById('codeInput');
-    codeInput.value += number;
+    let codeInput = document.getElementById('codeInput'); //codeInput = inputveld 
+    codeInput.value += number; //voegt nummers bij de andere values
 }
 
-// Functie om de input te wissen
+// Function deleting numbers in inputveld 
+// gekoppeld aan button met kruisje 
 function clearInput() {
-    document.getElementById('codeInput').value = '';
+    document.getElementById('codeInput').value = ''; //zet naar default
 }
+
+
 
 // Functie om de productinformatie in te vullen en zichtbaar te maken
 function submitCode() {
-    let code = document.getElementById('codeInput').value;
+    let code = document.getElementById('codeInput').value; //filtert value van inputveld
 
-    // Verberg alle dialoogvensters eerst
+    // Verberg alle dialoogvensters
     let allDialogs = document.querySelectorAll('dialog');
     allDialogs.forEach(function (dialog) {
         dialog.close();
@@ -104,13 +114,13 @@ function submitCode() {
     // Zoek de specifieke dialoog voor de ingevoerde code en toon deze
     let dialog = document.getElementById('product-info-' + code);
     if (dialog) {
-        dialog.showModal(); // Toont het dialoog
+        dialog.showModal(); // Toon dialoog
     } else {
-        alert("Geen informatie beschikbaar voor deze productcode.");
+        alert("Geen match gevonden, probeer opnieuwe");
     }
 
-    // Leeg het invoerveld na het tonen van de informatie
-    document.getElementById('codeInput').value = '';
+    // Leeg inputveld (function)
+    clearInput();
 }
 
 // Functie om een dialoog te sluiten
