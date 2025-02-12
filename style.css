@@ -290,7 +290,9 @@ dialog::backdrop {
   background-color: #ccc;
 }
 
-#product-info-1005 img:nth-of-type(2) {
+#product-info-1005 img:nth-of-type(2), #product-info-2202 img:nth-of-type(2), 
+#product-info-1002 img:nth-of-type(2),  #product-info-1003 img:nth-of-type(2), #product-info-1004 img:nth-of-type(2),
+#product-info-1006 img:nth-of-type(2){
   animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite both;
   height: 250px;
   margin: 5px;
