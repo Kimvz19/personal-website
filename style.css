@@ -9,8 +9,6 @@
   --font-weight1: 400;
   --font-weight2: 300;
   --font-style: normal;
-
-
 }
 
 /* voor de kleure */
@@ -19,7 +17,6 @@
     --green: color(display-p3 0 1 0);
   }
 }
-
 
 
 /***********************/
@@ -233,11 +230,19 @@ button:hover {
 }
 
 button:nth-child(10) {
-  background: lightcoral;
+  background-color: transparent;
+  background-image: url("/images/icons/cross.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 button:nth-child(12) {
-  background: lightgreen;
+  background-color: transparent;
+  background-image: url("/images/icons/check.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Style for dialogs */
