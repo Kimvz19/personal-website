@@ -24,9 +24,7 @@ fetch(myURL)
         let myImg = document.querySelector("article img");
         let myAvatar = data208.data.avatar;
         myImg.src = myAvatar;
-        myImg.alt = myName;
       
-
 
         let JsonCustom = JSON.parse(data208.data.custom);
         //  let myPets = JsonCustom.Huisdier;

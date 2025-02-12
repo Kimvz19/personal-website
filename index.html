@@ -23,13 +23,12 @@
     </header>
 
     <main>
-
-        
         <!-- bronvermelding globale opzet : https://chatgpt.com/share/67ac7bc1-4754-8000-a293-12bb5f420a91-->
         <!-- Products in the vending machine -->
         <div class="product-container">
+
                <!-- Product 1 : Boyfriend-->
-               <div class="product" data-code="2202" data-info="boyfriend">
+               <div class="product" data-code="2202">
                    <img src="images/products/boyfriend.png" alt="Product 1">
                    <p>Boyfriend</p>
                    <p class="product-code">Code: 2202</p>
@@ -71,16 +70,21 @@
                </div>
            </div>
 
-    
+           <!-- Container met persoonlijk stukje + buttons -->
            <div class="container">
+
+            <!-- Persoonlijke stukje-->
             <article>
                 <img src="/images/dancing-sushi.png" alt="profielfoto">
                 <h2>api komt hier</h2> <!-- api gaat hier inladen - naam -->
-               </article>
+            </article>
 
+            <!-- Code buttons -->
+            <!-- bronvermelding readonly : https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly -->
+            <input type="text" id="codeInput" readonly>
 
-               <input type="text" id="codeInput" readonly>
-               <div class="buttons">
+            <!-- buttons -->
+            <div class="buttons">
                    <button onclick="addNumber(1)">1</button>
                    <button onclick="addNumber(2)">2</button>
                    <button onclick="addNumber(3)">3</button>
@@ -146,7 +150,7 @@
            <!-- Traveling product-->
            <dialog id="product-info-1006">
             <img src="images/kim-logo-line2.png" alt="kim's logo line">
-               <h2>Traveling</h2>
+               <h2>Travelling</h2>
                <p></p>
                <button onclick="closeDialog('product-info-1006')">Sluiten</button>
                <img src="images/kim-logo-line2.png" alt="kim's logo line">
