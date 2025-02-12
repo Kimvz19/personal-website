@@ -50,7 +50,7 @@ p {
 body {
   /* background: linear-gradient(to left top, #000000, #FFFFFF, #000000); */
   background-size: 120% 150%; 
-  background-image: url("/images/products/spacyBackground.png");
+  background-image: url("../images/products/spacyBackground.png");
 
   animation: gradientAnimation 10s ease infinite;
   display: flex;
@@ -60,7 +60,7 @@ body {
   margin: 0;
   height: 100%;
   flex-direction: column;
-  cursor: url("/images/cursor.png"), pointer;
+  cursor: url("../images/cursor.png"), pointer;
 }
 
 /* animation gradient */
@@ -234,7 +234,7 @@ button:hover {
 
 button:nth-child(10) {
   background-color: transparent;
-  background-image: url("/images/icons/cross.png");
+  background-image: url("../images/icons/cross.png");
   background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;
@@ -242,7 +242,7 @@ button:nth-child(10) {
 
 button:nth-child(12) {
   background-color: transparent;
-  background-image: url("/images/icons/check.png");
+  background-image: url("../images/icons/check.png");
   background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;
