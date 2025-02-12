@@ -23,7 +23,7 @@ fetch(myURL)
         let footerP = document.querySelector("footer p"); // select p footer html 
 
 
-        deH1.textContent = birthdayDate; // adding h1 birthday
+        deH1.textContent = `${myName}  -   ${birthdayDate}`; // adding h1 birthday
         deH2.textContent = myNickName; // adding h2 nickname
         footerP.textContent = "made by " + myName; // adding footer p full name 
 
