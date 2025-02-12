@@ -29,13 +29,14 @@ header img{
 
 h1 {
   color: var(--font-color1);
-  font-size: 20px;
+  font-size: 28px;
   font-family: var(--font-family2);
   margin-top: -35px;
   margin-bottom: -15px;
   background-color: #a5a3b2;
   padding: 5px 5px;
   border-radius: 10px;
+  color: white;
 
 }
 

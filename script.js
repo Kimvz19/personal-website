@@ -14,16 +14,14 @@ fetch(myURL)
     .then(data208 => {
 
         let myNickName = data208.data.nickname; // filter nickname 
-        let birthdayDate = data208.data.birthdate; // filter birthdate
         let myName = data208.data.name; // filter full name
-
 
         let deH1 = document.querySelector("h1"); // select h1 html 
         let deH2 = document.querySelector("h2"); // select h2 html 
         let footerP = document.querySelector("footer p"); // select p footer html 
 
 
-        deH1.textContent = `${myName}  -   ${birthdayDate}`; // adding h1 birthday
+        deH1.textContent = myName // adding h1 birthday
         deH2.textContent = myNickName; // adding h2 nickname
         footerP.textContent = "made by " + myName; // adding footer p full name 
 
