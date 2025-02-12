@@ -49,13 +49,13 @@ fetch(myURL)
         let { cat1, cat2, cats, genderCat, ageCat } = JsonCustom;
         let dialog2 = document.getElementById('product-info-1002');
         let pTag2 = dialog2.querySelector('p');
-        pTag2.textContent = `I have ${cats}, ${cat1} and ${cat2}. Their both ${genderCat}s and ${ageCat} years old.`;
+        pTag2.textContent = `I have ${cats} cats, ${cat1} and ${cat2}. They're both ${genderCat}s and ${ageCat} years old.`;
 
         //Dialog 3
         let { schoolYear, minor, goal1, goal2, goal3 } = JsonCustom;
         let dialog3 = document.getElementById('product-info-1003');
         let pTag3 = dialog3.querySelector('p');
-        pTag3.innerHTML = `I'm now in my ${schoolYear} of CMD. For my minor, I chose ${minor}. <br> <br> My goals for this minor are:
+        pTag3.innerHTML = `I'm currently in my ${schoolYear} of CMD. For my minor, I chose ${minor}. <br> <br> My goals for this minor are:
         <br> 1) ${goal1}<br>2) ${goal2}<br>3) ${goal3}.`
 
 
@@ -63,20 +63,20 @@ fetch(myURL)
         let { house, dateHouse, HouseMateName } = JsonCustom;
         let dialog4 = document.getElementById('product-info-1004');
         let pTag4 = dialog4.querySelector('p');
-        pTag4.innerHTML = `${dateHouse} ago, I started living on my own. My housemate's name is ${HouseMateName}, she is my sister. We live in ${house}.`
+        pTag4.innerHTML = `${dateHouse} ago, I started living on my own. My housemate is ${HouseMateName}, my sister. We live in ${house}.`
 
 
         // dialog 5 
         let { favFood } = JsonCustom;
         let dialog5 = document.getElementById('product-info-1005');
         let pTag5 = dialog5.querySelector('p');
-        pTag5.innerHTML = `My favorite food is ${favFood}`
+        pTag5.innerHTML = `My favorite food is ${favFood}!`
 
         // dialog6 
         let { newVakay, vakaySummer } = JsonCustom;
         let dialog6 = document.getElementById('product-info-1006');
         let pTag6 = dialog6.querySelector('p');
-        pTag6.innerHTML = `This coming holiday, I'm going ${newVakay} and during the summer holidays I'm going to ${vakaySummer}.`
+        pTag6.innerHTML = `This upcoming holiday, I'm going ${newVakay} and during the summer holidays,  I'll be going to ${vakaySummer}.`
 
     })
     //error prevention
