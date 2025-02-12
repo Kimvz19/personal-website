@@ -13,9 +13,21 @@ fetch(myURL)
     .then(response => response.json())  // Zet de response om naar JSON
     .then(data208 => {
         let myNickName = data208.data.nickname; //filtert nickname 
+        let birthdayDate = data208.data.birthdate;
         let deH1 = document.querySelector("h1"); //h1 selecteren html
+        let deH2 = document.querySelector("h2");
 
-        deH1.textContent = "Learn more about " + myNickName;
+        deH1.textContent = birthdayDate;
+        deH2.textContent = myNickName;
+
+        // Selecteert de bestaande profielfoto <img> in het <article>-element
+        let myImg = document.querySelector("article img");
+        let myAvatar = data208.data.avatar;
+        myImg.src = myAvatar;
+        myImg.alt = myName;
+      
+
+
         let JsonCustom = JSON.parse(data208.data.custom);
         //  let myPets = JsonCustom.Huisdier;
         //  console.log(myPets); 
@@ -35,7 +47,7 @@ fetch(myURL)
         pTag2.textContent = `I have ${cats}, ${cat1} and ${cat2}. Their both ${genderCat}s and ${ageCat} years old.`;
 
         //Dialog 3
-        let { schoolYear, minor, goal1, goal2, goal3} = JsonCustom;
+        let { schoolYear, minor, goal1, goal2, goal3 } = JsonCustom;
         let dialog3 = document.getElementById('product-info-1003');
         let pTag3 = dialog3.querySelector('p');
         pTag3.innerHTML = `I'm now in my ${schoolYear} of CMD. For my minor, I chose ${minor}. <br> <br> My goals for this minor are:
@@ -43,20 +55,20 @@ fetch(myURL)
 
 
         // dialog4
-        let {house, dateHouse, HouseMateName} = JsonCustom;
+        let { house, dateHouse, HouseMateName } = JsonCustom;
         let dialog4 = document.getElementById('product-info-1004');
         let pTag4 = dialog4.querySelector('p');
         pTag4.innerHTML = `${dateHouse} ago, I started living on my own. My housemate's name is ${HouseMateName}, she is my sister. We live in ${house}.`
 
 
         // dialog 5 
-        let {favFood} = JsonCustom;
+        let { favFood } = JsonCustom;
         let dialog5 = document.getElementById('product-info-1005');
         let pTag5 = dialog5.querySelector('p');
         pTag5.innerHTML = `My favorite food is ${favFood}`
 
         // dialog6 
-        let {newVakay, vakaySummer} = JsonCustom;
+        let { newVakay, vakaySummer } = JsonCustom;
         let dialog6 = document.getElementById('product-info-1006');
         let pTag6 = dialog6.querySelector('p');
         pTag6.innerHTML = `This coming holiday, I'm going ${newVakay} and during the summer holidays I'm going to ${vakaySummer}.`

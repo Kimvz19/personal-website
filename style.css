@@ -32,7 +32,7 @@ header {
 
 h1 {
   color: black;
-  font-size: 32px;
+  font-size: 25px;
   font-family: var(--font-family2);
   margin-top: -50px;
   margin-bottom: -15px;
@@ -40,10 +40,10 @@ h1 {
 
 h2 {
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Sacramento";
-  margin-top: 10px;
-  margin-bottom: -15px;
+  margin-bottom: -20px;
+  margin-top: -10px;
 }
 
 p {
@@ -296,3 +296,11 @@ dialog:has(button) button {
   font-family: "Montserrat";
   font-size: 15px;
 }
+
+
+article img{
+  width: 200px;
+  border-radius: 12px;
+  margin: 2px;
+}
+
