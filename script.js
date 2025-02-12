@@ -14,11 +14,14 @@ fetch(myURL)
     .then(data208 => {
         let myNickName = data208.data.nickname; //filtert nickname 
         let birthdayDate = data208.data.birthdate;
+        let myName = data208.data.name;
         let deH1 = document.querySelector("h1"); //h1 selecteren html
         let deH2 = document.querySelector("h2");
+        let footerP = document.querySelector("footer p");
 
         deH1.textContent = birthdayDate;
         deH2.textContent = myNickName;
+        footerP.textContent = "made by " + myName;
 
         // Selecteert de bestaande profielfoto <img> in het <article>-element
         let myImg = document.querySelector("article img");
